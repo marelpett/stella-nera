@@ -1,0 +1,379 @@
+/* Definierar färger */
+:root{
+  --prim-color-white: #FFF8E3;
+  --sec-color-white: #E4DECB;
+  --prim-color-green: #1E5F64;
+  --sec-color-green: #144244;
+  --sec-text-color: #444444;
+  --primary-text-color: #3B3B3B; 
+}
+
+body{
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.05rem;
+  overflow-x: hidden; 
+}
+
+/* TEXTINSTÄLLNINGAR */
+h2,h3{
+  font-family: 'Lobster Two', sans-serif;
+  color: var(--primary-text-color);
+}
+
+h1{
+  font-family: 'Pattaya', sans-serif;
+  font-size: 3rem;
+  color: var(--prim-color-green);
+}
+
+h2{
+  font-size: 3.5rem;
+  font-weight: 300;
+}
+
+h3{
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+h4{
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-text-color);
+}
+
+p{
+  font-family: 'Inter', sans-serif;
+  color: var(--sec-text-color);
+  line-height: 1.5;
+  padding: 1.5rem;
+}
+
+/* --- HEADER --- */
+header{
+  display: flex;
+  position: fixed;
+  background-color: var(--prim-color-white);
+  width: 100%;
+  height: 10vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+
+  transition: 0.3s ease;
+}
+
+header a{
+  text-decoration: none;
+}
+
+header.scrolled {
+  background-color: var(--prim-color-green);
+  color: #FFF8E3;
+}
+
+header.scrolled a, header.scrolled h1, header.scrolled nav a { color: #FFF8E3; }
+header.scrolled nav ul li a::after { background-color: #FFF8E3; }
+
+/* Navbar */
+nav{
+  padding: 0 2rem;
+}
+
+nav ul{
+  display: flex;
+}
+
+nav ul li{
+  padding: 0 2rem;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--prim-color-green);
+  font-weight: 600;
+  padding-bottom: 0.3rem;
+  text-transform: uppercase;
+}
+
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--prim-color-green);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.2s ease;
+}
+
+
+nav ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --- MAIN --- */
+main{
+  padding-top: 10vh;
+  background-color: var(--prim-color-white);
+  width: 100%;
+  max-width: 100vw;
+  overflow-x: hidden;
+  padding-bottom: 3rem;
+}
+
+/* HERO */
+#hero, #hero-book, #hero-contact, #hero-julbord, #hero-menu{
+  display: flex;
+  height: 90vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#hero{
+  background: url(/assets/images/hero-img.jpg) no-repeat center/ cover;
+}
+
+.container{
+  background: rgba(30,95,100,0.5);
+  padding: 2rem;
+}
+
+.container h2{
+  font-size: 10rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  color: var(--prim-color-white);
+}
+
+.info h2{
+  color: var(--prim-color-white);
+  padding-top: 3rem;
+}
+
+.info p{
+  color: var(--prim-color-white);
+  padding: 3rem;
+}
+
+#hero .button{
+  background-color: var(--prim-color-white);
+  padding: 1rem 3rem;
+  margin: 2rem;
+  margin-bottom: 6rem;
+  border: none;
+  color: var(--prim-color-green);
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 8px 8px var(--prim-color-green);
+  
+}
+
+.button h4{
+  color: #144244;
+}
+
+#hero .button:hover{
+  background-color: var(--sec-color-white) ;
+}
+
+#hero a{
+  text-decoration: none;
+}
+
+/* SECTION */
+.about-container{
+  margin: 0 auto;
+  width: min(100% - 2rem, 70rem);
+  padding: 0 1rem;
+}
+
+article {
+  margin: 5rem 0;
+  padding-bottom: 3rem;
+}
+
+#about{
+  border-bottom: 2px solid var(--sec-text-color);
+}
+
+.info-wrapper{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.col-left, .col-right{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-left h2, .col-right h2{
+  margin-bottom: 2rem;
+}
+
+.col-left img, .col-right img{
+  height: auto; 
+  max-width: 100%;
+  display: block;
+  margin: 0 auto;
+  max-height: clamp(200px, 50vh, 500px);
+}
+
+#about p{
+  display: inline-block
+}
+
+/* --- FOOTER --- */
+footer{
+  padding: 1rem 0;
+  text-align: center;
+  background-color: var(--sec-color-white);
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* ----- BOOKING-PAGE ----- */
+#hero-book{
+  background: url(/assets/images/hero-img-book.jpg) no-repeat center/ cover;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  border: 2px solid var(--prim-color-green);
+  box-shadow: 8px 8px var(--prim-color-green);
+  gap: 1rem;
+  padding: 1rem;
+  width: 25rem;
+  margin-left: 2rem;
+}
+
+form label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  color: var(--sec-text-color);
+  margin-bottom: 0.3rem;
+}
+
+form input {
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--sec-color-green);
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+form input:focus {
+  outline: none;
+  border-color: var(--prim-color-green);
+  box-shadow: 0 0 0 3px rgba(30, 95, 100, 0.2);
+}
+
+form button {
+  margin-top: 1.5rem;
+  background-color: var(--prim-color-green);
+  color: var(--prim-color-white);
+  border: none;
+  padding: 1rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form button:hover {
+  background-color: var(--sec-color-green);
+}
+
+.inline-items{
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ----- CONTACT-PAGE ------*/
+#hero-contact{
+  background: url(/assets/images/hero-contact.jpg) no-repeat center/ cover;
+}
+
+.contact-page .info-wrapper{
+  align-items: start; 
+}
+
+table{
+  border-collapse: collapse;
+  text-align: center;
+  color: var(--sec-text-color);
+  margin: 0 auto;   
+}
+
+td{
+  padding: 8px;
+}
+
+td:first-child {
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+/* ----- MENU-PAGE ------*/
+#hero-menu{
+  background: url(/assets/images/hero-menu.jpg) no-repeat center/ cover;
+}
+
+#menu{
+  border-bottom: 2px solid var(--sec-text-color);
+  text-align: center;
+}
+
+.menu-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  gap: 4rem;
+}
+
+.menu-item{
+  margin:4rem 0;
+  text-align: left; 
+}
+
+.menu-price{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1.5rem;
+}
+
+.menu-price p{
+  margin: 3rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.menu-item p{
+  margin: 0;
+  padding: 0;
+}
+
+/* ----- JULBORD-PAGE -----*/
+#hero-julbord{
+  background: url(/assets/images/hero-julbord.jpg) no-repeat center/ cover;
+}
+
+.christmas-title{
+  margin: 2rem 0;
+}
+
+.jul {
+  margin-top: 2rem;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="sv">
+  <head>
+    <meta charset="UTF-8">
+    <title>Stella Nera - Boka bord</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+
+    <link rel="stylesheet" href="../assets/styles/reset.css">
+    <link rel="stylesheet" href="../assets/styles/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&family=Pattaya&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+
+      <a href="/index.html"><h1>Stella Nera</h1></a>
+
+      <!-- Navigation -->
+      <nav>
+        <ul>
+          <li>
+            <a href="/html/book.html">Bokning</a>
+          </li>
+          <li>
+            <a href="/html/menu.html">Meny</a>
+          </li>
+          <li>
+            <a href="/html/julbord.html">Julbord</a>
+          </li>
+          <li>
+            <a href="/html/contact.html">Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <section id="hero-book" data-hero>
+        <div class="container">
+          <h2>BOKNING</h2>
+        </div>
+      </section>
+
+      <div class="about-container">
+        <article id="about">
+          <div class="info-wrapper">
+            <div class="col-left">
+              <h2>Boka bord hos oss</h2>
+              <img src="/assets/images/hero-book.jpg" alt="Dukat bord med skylten reserved.">
+            </div>
+            <div class="col-right">
+              <form>
+                <label>Namn</label>
+                <input type="text" required>
+                <label>Mejladress</label>
+                <input type="email" required>
+                <label>Önskat datum</label>
+                <input type="date" required>
+                <div class="inline-items">
+                  <label>Tid</label>
+                  <input 
+                    type="time"
+                    min="17:00"
+                    max="21:30"
+                    required>
+                  <label>Antal i sällskap</label>
+                  <input type="number" min="1" max="8" required>
+                </div>
+                <label>Övrig kommentar</label>
+                <input type="text">
+                <button>Skicka bokningförfrågan</button>
+              </form>
+            </div>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer>
+      <p>&copy; 2025 Stella Nera. All rights reserved.</p>
+    </footer>
+    <script src="../js/scroll.js" type="module"></script>
+  </body>
+
+</html>
